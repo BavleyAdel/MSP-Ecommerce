@@ -66,12 +66,33 @@ const Ecommerce = () => {
         padding: 1px 5px;
         font-size: 10px;
         top: 25px;
-        right: 0px;
+        right: 5px;
     }`;
     document.head.appendChild(afterStyle);
 
 
-    // afterStyle.innerHTML = afterStyle.innerHTML.replace(/height: [0-9]+px/, "height: 12px");
+    
+        // const goUpBtn = document.getElementsByClassName('.myBtn');
+        // document.ready(function () {
+        //     goUpBtn.hide();
+        
+        //     window.scroll(function () {
+        //         if (this.scrollTop() > 100) {
+        //             goUpBtn.show('fade');
+        //         } else {
+        //             goUpBtn.hide('fade');
+        //         }
+        //     });
+        
+        //     goUpBtn.click(function () {
+        //         (document.html, document.body).animate({
+        //             scrollTop: 0
+        //         }, 1000);
+        
+        //     });
+        
+        // })
+    
     return (
         <>
             <main className='main'>
@@ -87,10 +108,14 @@ const Ecommerce = () => {
 
                     <Products products={products} addToCart={addToCart} />
                     <div className="orders">
-                        <Orders orders={orders} deleteOrder={deleteOrder}/>
+                        <Orders orders={orders} deleteOrder={deleteOrder} />
                         <div className="total-price"> <p><span>Total Price</span> <sub>EGP </sub> {totalPrice}</p></div>
                     </div>
                 </section>
+                {/* <button class="goUp myBtn"> <span class="material-symbols-outlined">
+                    keyboard_control_key
+                </span></button> */}
+
             </main>
         </>
     )
